@@ -57,7 +57,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		List<Employee> results = null;
 		
 		if (theName != null && (theName.trim().length() > 0)) {
-			results = employeeRepository.findByFirstNameContainsOrLastNameContainsAllIgnoreCase(theName, theName);
+			results = employeeRepository.findByFirstNameContainsOrLastNameContainsOrEmailContainsAllIgnoreCase(theName, theName, theName);
 		}
 		else {
 			results = findAll();
