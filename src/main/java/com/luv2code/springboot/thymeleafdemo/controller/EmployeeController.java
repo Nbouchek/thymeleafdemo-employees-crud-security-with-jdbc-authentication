@@ -34,7 +34,7 @@ public class EmployeeController {
 		// add to the spring model
 		theModel.addAttribute("employees", theEmployees);
 		
-		return "/employees/list-employees";
+		return "employees/list-employees";
 	}
 	
 	@GetMapping("/showFormForAdd")
@@ -45,7 +45,7 @@ public class EmployeeController {
 		
 		theModel.addAttribute("employee", theEmployee);
 		
-		return "/employees/employee-form";
+		return "employees/employee-form";
 	}
 
 	@GetMapping("/showFormForUpdate")
@@ -59,7 +59,7 @@ public class EmployeeController {
 		theModel.addAttribute("employee", theEmployee);
 		
 		// send over to our form
-		return "/employees/employee-form";			
+		return "employees/employee-form";
 	}
 	
 	
@@ -96,7 +96,7 @@ public class EmployeeController {
 		theModel.addAttribute("employees", theEmployees);
 		
 		// send to /employees/list
-		return "/employees/list-employees";
+		return "employees/list-employees";
 		
 	}
 	
